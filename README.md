@@ -4,4 +4,4 @@
 1️⃣ 5 sections.\
 2️⃣ Layout → Grid.\
 3️⃣ Components → Flexbox & Bootstrap.\
-4️⃣ Responsive.\
+4️⃣ Responsive.

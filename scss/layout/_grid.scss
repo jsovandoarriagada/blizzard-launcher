@@ -1,0 +1,38 @@
+/* LAYOUT */
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main";
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 9fr;
+
+  header {
+    grid-area: header;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: main;
+    align-self: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-areas:
+      "header"
+      "main"
+      "nav";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+
+    nav {
+      flex-direction: row;
+    }
+  }
+}

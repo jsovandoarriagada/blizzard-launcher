@@ -1,0 +1,111 @@
+/* HEADER */
+@import "../utilities/variables";
+
+header {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2.3px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // HEADER: LEFT
+  .header-left {
+    margin-left: 20px;
+
+    // HEADER: BLIZZARD
+    .blizzard-logo {
+      height: 60px;
+      filter: drop-shadow(1px 1px $shadow-color);
+    }
+
+    .blizzard-symbol {
+      height: 50px;
+      display: none;
+      filter: drop-shadow(1px 1px $shadow-color);
+    }
+
+    @media (max-width: 1024px) {
+      .blizzard-logo {
+        display: none;
+      }
+
+      .blizzard-symbol {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .blizzard-symbol {
+        height: 40px;
+      }
+    }
+  }
+  // HEADER: RIGHT
+  .header-right {
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+
+    // HEADER: AVATAR
+    .avatar-and-icon {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+
+      .avatar {
+        .status {
+          background-color: $status-color;
+          position: absolute;
+          top: 41px;
+          left: 41px;
+          z-index: 1;
+          padding: 8px;
+          border-radius: 50%;
+          border: 2px solid $status-border-color;
+        }
+
+        img {
+          height: 60px;
+          border-radius: 50%;
+
+          &:hover {
+            box-shadow: 0px 0px 10px 2px $blizzard-color;
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .avatar {
+          img {
+            height: 50px;
+          }
+
+          .status {
+            top: 34px;
+            left: 34px;
+            padding: 7px;
+          }
+        }
+      }
+
+      @media (max-width: 420px) {
+        .avatar {
+          img {
+            height: 40px;
+          }
+
+          .status {
+            top: 26px;
+            left: 26px;
+            padding: 6px;
+          }
+        }
+      }
+
+      ion-icon {
+        color: $text-color;
+        filter: drop-shadow(1px 1px $shadow-color);
+      }
+    }
+  }
+}

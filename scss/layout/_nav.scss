@@ -1,0 +1,61 @@
+/* NAV */
+@import "../utilities/variables";
+
+nav {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2.3px);
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  text-shadow: 1px 1px $shadow-color;
+
+  a {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    img {
+      height: 60px;
+    }
+
+    @media (max-width: 1024px) {
+      img {
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      img {
+        height: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    a {
+      align-self: center;
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .active {
+    color: $text-color;
+  }
+}
+
+@media (max-width: 420px) {
+  nav {
+    gap: 15px;
+  }
+}

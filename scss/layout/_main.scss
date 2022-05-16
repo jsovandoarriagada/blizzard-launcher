@@ -1,0 +1,66 @@
+/* MAIN */
+@import "../utilities/variables";
+
+.content {
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    font-size: 22px;
+  }
+
+  @media (max-width: 720px) {
+    a {
+      font-size: 18px;
+    }
+  }
+
+  // MAIN: GAME LOGO
+  .game-logo {
+    height: 75px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 720px) {
+    .game-logo {
+      height: 60px;
+    }
+  }
+
+  // MAIN: CARDS
+  @import "../components/cards";
+
+  // MAIN: BUTTONS
+  @import "../components/buttons";
+
+  // MAIN: VERSION
+  .version {
+    color: $text-color;
+    text-shadow: 1px 1px $shadow-color;
+
+    a {
+      color: $blizzard-color;
+      font-size: 16px;
+    }
+
+    @media (max-width: 420px) {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .content {
+    max-width: 90%;
+    gap: 20px;
+  }
+}

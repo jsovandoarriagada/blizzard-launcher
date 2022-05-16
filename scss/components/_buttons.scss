@@ -1,0 +1,63 @@
+// MAIN: PLAY & INSTALL
+.play,
+.install {
+  padding: 20px 60px;
+  background-color: $blizzard-color;
+  border-radius: 4px;
+  text-shadow: 1px 1px $shadow-color;
+}
+
+.play:hover,
+.install:hover {
+  background-color: $hover-blizzard-color;
+}
+
+@media (max-width: 720px) {
+  .play,
+  .install {
+    padding: 15px 60px;
+  }
+}
+
+// MAIN: INSTALLING...
+.installing-progress-and-version {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .installing-and-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .installing {
+      padding: 20px 60px;
+      background-color: $active-blizzard-color;
+      border-radius: 4px;
+      text-shadow: 1px 1px $shadow-color;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 720px) {
+      .installing {
+        padding: 15px 60px;
+      }
+    }
+
+    .progress {
+      height: 40px;
+      width: 80%;
+
+      .progress-bar {
+        background-color: $status-color;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .progress {
+        height: 30px;
+        width: 100%;
+      }
+    }
+  }
+}

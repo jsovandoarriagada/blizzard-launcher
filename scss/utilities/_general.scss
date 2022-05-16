@@ -1,0 +1,51 @@
+/* GENERAL */
+@import "variables";
+
+body {
+  font-family: $font-stack;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  // GENERAL: LINKS
+  a {
+    text-decoration: none;
+    color: $link-color;
+  }
+
+  &:hover {
+    color: $text-color;
+  }
+
+  // GENERAL: LISTS
+  li {
+    list-style: none;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+// GENERAL: BACKGROUNDS
+.hearthstone-background {
+  background-image: url(../img/hearthstone-background.jpg);
+}
+
+.heroes-background {
+  background-image: url(../img/heroes-background.jpg);
+}
+
+.overwatch-background {
+  background-image: url(../img/overwatch-background.jpg);
+}
+
+.reforged-background {
+  background-image: url(../img/reforged-background.jpg);
+}
+
+.warcraft-background {
+  background-image: url(../img/warcraft-background.jpg);
+}

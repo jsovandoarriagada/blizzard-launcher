@@ -1,0 +1,84 @@
+// MAIN: CARDS
+.cards {
+  display: flex;
+  gap: 30px;
+  font-family: $font-stack;
+  margin-bottom: 20px;
+
+  .card {
+    background: none;
+
+    ion-icon {
+      font-size: 18px;
+      filter: drop-shadow(1px 1px $shadow-color);
+    }
+
+    p {
+      margin: auto 0;
+      text-shadow: 1px 1px $shadow-color;
+    }
+
+    img {
+      border-radius: 0;
+    }
+
+    .card-body {
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(2.3px);
+      text-shadow: 1px 1px $shadow-color;
+    }
+
+    .card-text {
+      color: $text-color;
+    }
+
+    .options-and-code {
+      display: flex;
+      gap: 30px;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(2.3px);
+      padding: 15px 30px;
+
+      .options,
+      .code {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        color: $text-color;
+
+        &:hover {
+          color: $hover-blizzard-color;
+        }
+      }
+    }
+
+    @media (max-width: 720px) {
+      .options-and-code {
+        height: 48px;
+        gap: 25px;
+      }
+    }
+  }
+
+  .card-2,
+  .card-3 {
+    &:hover {
+      box-shadow: 0px 0px 10px 2px #00b4ff;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 1366px) {
+    .card-3 {
+      display: none;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .card-2 {
+      display: none;
+    }
+  }
+}

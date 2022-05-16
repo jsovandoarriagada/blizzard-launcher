@@ -1,0 +1,290 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+/* GENERAL */
+body {
+  font-family: "Rubik", sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  body a {
+    text-decoration: none;
+    color: #b3b3b3; }
+  body:hover {
+    color: #ffffff; }
+  body li {
+    list-style: none; }
+
+@media (max-width: 420px) {
+  body {
+    font-size: 14px; } }
+
+.hearthstone-background {
+  background-image: url(../img/hearthstone-background.jpg); }
+
+.heroes-background {
+  background-image: url(../img/heroes-background.jpg); }
+
+.overwatch-background {
+  background-image: url(../img/overwatch-background.jpg); }
+
+.reforged-background {
+  background-image: url(../img/reforged-background.jpg); }
+
+.warcraft-background {
+  background-image: url(../img/warcraft-background.jpg); }
+
+/* LAYOUT */
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "header header" "nav main";
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 9fr; }
+  .layout header {
+    grid-area: header; }
+  .layout nav {
+    grid-area: nav; }
+  .layout main {
+    grid-area: main;
+    align-self: center; }
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-areas: "header" "main" "nav";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr 1fr; }
+    .layout nav {
+      flex-direction: row; } }
+
+/* HEADER */
+header {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2.3px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header .header-left {
+    margin-left: 20px; }
+    header .header-left .blizzard-logo {
+      height: 60px;
+      filter: drop-shadow(1px 1px #000000); }
+    header .header-left .blizzard-symbol {
+      height: 50px;
+      display: none;
+      filter: drop-shadow(1px 1px #000000); }
+    @media (max-width: 1024px) {
+      header .header-left .blizzard-logo {
+        display: none; }
+      header .header-left .blizzard-symbol {
+        display: flex; } }
+    @media (max-width: 420px) {
+      header .header-left .blizzard-symbol {
+        height: 40px; } }
+  header .header-right {
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px; }
+    header .header-right .avatar-and-icon {
+      display: flex;
+      gap: 5px;
+      align-items: center; }
+      header .header-right .avatar-and-icon .avatar .status {
+        background-color: #6cdb00;
+        position: absolute;
+        top: 41px;
+        left: 41px;
+        z-index: 1;
+        padding: 8px;
+        border-radius: 50%;
+        border: 2px solid #333333; }
+      header .header-right .avatar-and-icon .avatar img {
+        height: 60px;
+        border-radius: 50%; }
+        header .header-right .avatar-and-icon .avatar img:hover {
+          box-shadow: 0px 0px 10px 2px #00b4ff; }
+      @media (max-width: 1024px) {
+        header .header-right .avatar-and-icon .avatar img {
+          height: 50px; }
+        header .header-right .avatar-and-icon .avatar .status {
+          top: 34px;
+          left: 34px;
+          padding: 7px; } }
+      @media (max-width: 420px) {
+        header .header-right .avatar-and-icon .avatar img {
+          height: 40px; }
+        header .header-right .avatar-and-icon .avatar .status {
+          top: 26px;
+          left: 26px;
+          padding: 6px; } }
+      header .header-right .avatar-and-icon ion-icon {
+        color: #ffffff;
+        filter: drop-shadow(1px 1px #000000); }
+
+/* NAV */
+nav {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2.3px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  text-shadow: 1px 1px #000000; }
+  nav a {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+    nav a:hover {
+      color: #ffffff; }
+    nav a img {
+      height: 60px; }
+    @media (max-width: 1024px) {
+      nav a img {
+        height: 50px; } }
+    @media (max-width: 420px) {
+      nav a img {
+        height: 40px; } }
+  @media (max-width: 1024px) {
+    nav a {
+      align-self: center; }
+      nav a p {
+        display: none; } }
+  nav .active {
+    color: #ffffff; }
+
+@media (max-width: 420px) {
+  nav {
+    gap: 15px; } }
+
+/* MAIN */
+.content {
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px; }
+  .content a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 22px; }
+  @media (max-width: 720px) {
+    .content a {
+      font-size: 18px; } }
+  .content .game-logo {
+    height: 75px;
+    margin-top: 15px;
+    margin-bottom: 20px; }
+  @media (max-width: 720px) {
+    .content .game-logo {
+      height: 60px; } }
+  .content .cards {
+    display: flex;
+    gap: 30px;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 20px; }
+    .content .cards .card {
+      background: none; }
+      .content .cards .card ion-icon {
+        font-size: 18px;
+        filter: drop-shadow(1px 1px #000000); }
+      .content .cards .card p {
+        margin: auto 0;
+        text-shadow: 1px 1px #000000; }
+      .content .cards .card img {
+        border-radius: 0; }
+      .content .cards .card .card-body {
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.3px);
+        text-shadow: 1px 1px #000000; }
+      .content .cards .card .card-text {
+        color: #ffffff; }
+      .content .cards .card .options-and-code {
+        display: flex;
+        gap: 30px;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.3px);
+        padding: 15px 30px; }
+        .content .cards .card .options-and-code .options,
+        .content .cards .card .options-and-code .code {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          color: #ffffff; }
+          .content .cards .card .options-and-code .options:hover,
+          .content .cards .card .options-and-code .code:hover {
+            color: #00a2e6; }
+      @media (max-width: 720px) {
+        .content .cards .card .options-and-code {
+          height: 48px;
+          gap: 25px; } }
+    .content .cards .card-2:hover,
+    .content .cards .card-3:hover {
+      box-shadow: 0px 0px 10px 2px #00b4ff;
+      cursor: pointer; }
+    @media (max-width: 1366px) {
+      .content .cards .card-3 {
+        display: none; } }
+    @media (max-width: 720px) {
+      .content .cards .card-2 {
+        display: none; } }
+  .content .play,
+  .content .install {
+    padding: 20px 60px;
+    background-color: #00b4ff;
+    border-radius: 4px;
+    text-shadow: 1px 1px #000000; }
+  .content .play:hover,
+  .content .install:hover {
+    background-color: #00a2e6; }
+  @media (max-width: 720px) {
+    .content .play,
+    .content .install {
+      padding: 15px 60px; } }
+  .content .installing-progress-and-version {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; }
+    .content .installing-progress-and-version .installing-and-progress {
+      display: flex;
+      flex-direction: column;
+      gap: 30px; }
+      .content .installing-progress-and-version .installing-and-progress .installing {
+        padding: 20px 60px;
+        background-color: #007eb3;
+        border-radius: 4px;
+        text-shadow: 1px 1px #000000;
+        cursor: not-allowed; }
+      @media (max-width: 720px) {
+        .content .installing-progress-and-version .installing-and-progress .installing {
+          padding: 15px 60px; } }
+      .content .installing-progress-and-version .installing-and-progress .progress {
+        height: 40px;
+        width: 80%; }
+        .content .installing-progress-and-version .installing-and-progress .progress .progress-bar {
+          background-color: #6cdb00; }
+      @media (max-width: 720px) {
+        .content .installing-progress-and-version .installing-and-progress .progress {
+          height: 30px;
+          width: 100%; } }
+  .content .version {
+    color: #ffffff;
+    text-shadow: 1px 1px #000000; }
+    .content .version a {
+      color: #00b4ff;
+      font-size: 16px; }
+    @media (max-width: 420px) {
+      .content .version a {
+        font-size: 14px; } }
+
+@media (max-width: 720px) {
+  .content {
+    max-width: 90%;
+    gap: 20px; } }
